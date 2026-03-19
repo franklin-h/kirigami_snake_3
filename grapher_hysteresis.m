@@ -34,7 +34,7 @@ files = files(order(end:-1:1));
 fprintf('\nFound %d CSV files in "%s":\n', numel(files), dataFolder);
 for k = 1:numel(files), fprintf('%2d) %s\n', k, files(k).name); end
 
-repIdx = input('\nEnter the number of the representative file to plot: ');
+repIdx = input('\nEnter the number of the representative file to plot (Deprecated, enter anything): ');
 if isempty(repIdx) || ~isscalar(repIdx) || repIdx < 1 || repIdx > numel(files)
     error('Representative index must be an integer between 1 and %d.', numel(files));
 end
